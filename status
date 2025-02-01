@@ -1,0 +1,65 @@
+[33mcommit c17987dd06ab35f7c79bf5c20cfcbf6b0a6efff7[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 20:59:59 2025 +0000
+
+    Add Backspace Feature
+
+[33mcommit aecb42f6f13dbec0a3c19c8021a29eef8782d0fc[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 20:55:24 2025 +0000
+
+    Handle Negative Integers
+
+[33mcommit 461c9843822fb19226122b9ef633dde36bf2864a[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 20:46:37 2025 +0000
+
+    Add Clear Functionality
+
+[33mcommit 54e67b89d423b76af5827a05c6985bf8ee9f948e[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 20:24:58 2025 +0000
+
+    Fix Dot Operations
+
+[33mcommit 67798dd9fcc3ba2d205cfafb92f3ef2028f692c3[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 20:13:07 2025 +0000
+
+    Perform Calculations
+
+[33mcommit 3829495bc28d35ee7876c57e0901ad1700ec58af[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 12:16:58 2025 +0000
+
+    Will Populate Dot Correctly
+
+[33mcommit 82128c6198eabd215688b02577b45ea3f82a46d3[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 11:57:31 2025 +0000
+
+    Will Populate Display if Digit
+
+[33mcommit 5486fce2bef13f66977460516e8d118e0aa93456[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 11:44:34 2025 +0000
+
+    Add Calculator HTML and Styles
+
+[33mcommit 1970be1e709fa90cd7f3fdd1ed2ca2198a062718[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 11:04:11 2025 +0000
+
+    Add Operate Function
+
+[33mcommit 9c052c740b5df90ba8385cb05f6f46cc98a0a065[m
+Author: TheWoholo <lakkimsettisreyas@gmail.com>
+Date:   Sat Feb 1 11:01:28 2025 +0000
+
+    Add Operations Functions
+
+[33mcommit 9c6608a13820dd8a7debcdc784493b263e6db888[m
+Author: TheWoholo <147542182+TheWoholo@users.noreply.github.com>
+Date:   Sat Feb 1 16:25:39 2025 +0530
+
+    Initial commit

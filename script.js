@@ -217,10 +217,53 @@ function clearDisplay(){
     debug();
 }
 
+function addKeyboardFunctionalities() {
+    document.addEventListener("keydown", function(event) {
+        const key = event.key;
+
+        // Select display
+        const display = document.querySelector('.display');
+
+        // Check if the key is a number (0-9)
+        if (!isNaN(key)) {
+            document.querySelector(`.n${key}`).click();
+        }
+
+        // Handle decimal point (.)
+        else if (key === ".") {
+            document.querySelector(".dot").click();
+        }
+
+        // Handle operators
+        else if (key === "+") document.querySelector(".add").click();
+        else if (key === "-") document.querySelector(".subtract").click();
+        else if (key === "*") document.querySelector(".multiply").click();
+        else if (key === "/") document.querySelector(".divide").click();
+
+        // Handle Enter (equals)
+        else if (key === "Enter") {
+            event.preventDefault(); // Prevent form submission
+            document.querySelector(".equal").click();
+        }
+
+        // Handle Backspace (Delete last digit)
+        else if (key === "Backspace") {
+            document.querySelector(".delete").click();
+        }
+
+        // Handle Delete (Clear all)
+        else if (key === "Delete") {
+            document.querySelector(".AC").click();
+        }
+    });
+}
+
+
 function addFunctionalities(){
     display_digits();
     operator_functionality();
     clear_functionality();
+    addKeyboardFunctionalities();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
