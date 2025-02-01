@@ -1,5 +1,5 @@
-let first_digit=0;
-let second_digit=0;
+let first_digit=0.0;
+let second_digit=0.0;
 let operator_present=false;
 let current_operator = '';
 let dot_count=0;
@@ -38,6 +38,7 @@ function divide(a, b) {
 }
 
 function operate(operator, a, b) {
+    console.log(`${a} ${operator} ${b}`);
     switch (operator) {
         case '+':
             return add(a, b);
@@ -67,7 +68,7 @@ function handleClick(){
 }
 
 function handleDot(){
-    if(!isFirstDigit)
+    if(!isFirstDigit && !isSecondDigit)
     {
         display.innerHTML=second_digit;
         isSecondDigit=true;
@@ -124,7 +125,10 @@ function handleEquals(){
     first_digit = operate(current_operator, first_digit, second_digit);
     display.innerHTML = first_digit;
     operator_present=false;
-    dot_count=0;  //update this to depend on result of operation
+    if(Number.isInteger(first_digit))
+        dot_count=0;
+    else
+        dot_count=1;
     isFirstDigit=true;
     isSecondDigit=false;
     second_digit=0;
@@ -152,7 +156,7 @@ function handleOps(){
     display.innerHTML = first_digit;
     operator_present= true;
     current_operator = this.innerHTML;
-    dot_count=0;    //update this to depend on result of operation
+    dot_count=0;  //bcos new number, need better algo for this
     isFirstDigit=false;
     isSecondDigit=false;
     second_digit=0;
