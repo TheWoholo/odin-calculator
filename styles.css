@@ -81,6 +81,10 @@ html, body {
     flex:1;
 }
 
+.AC{
+    flex:1;
+}
+
 /* Operators container */
 .operators {
     display: flex;

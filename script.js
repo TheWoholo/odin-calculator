@@ -3,7 +3,8 @@ let second_digit=0.0;
 let operator_present=false;
 let current_operator = '';
 let dot_count=0;
-let isFirstDigit=true;
+let isFirstDigit=false;
+let isDisplayEmpty=true;
 let isSecondDigit=false;
 let display={};
 
@@ -15,6 +16,7 @@ function debug(){
     console.log("dot_count:", dot_count);
     console.log("isFirstDigit:", isFirstDigit);
     console.log("isSecondDigit:", isSecondDigit);
+    console.log("isDisplayEmpty:", isDisplayEmpty);
     console.log("\n");
 }
 
@@ -54,7 +56,11 @@ function operate(operator, a, b) {
 }
 
 function handleClick(){
-    if(!isFirstDigit && !isSecondDigit)  //it is an operator before this
+    if(isDisplayEmpty){
+        isFirstDigit=true;
+        isDisplayEmpty=false;
+    }
+    else if(!isFirstDigit && !isSecondDigit)  //it is an operator before this
     {
         display.innerHTML=second_digit;
         isSecondDigit=true;
@@ -68,6 +74,9 @@ function handleClick(){
 }
 
 function handleDot(){
+    if(isDisplayEmpty){
+        isFirstDigit=true;
+    }
     if(!isFirstDigit && !isSecondDigit)
     {
         display.innerHTML=second_digit;
@@ -117,7 +126,7 @@ function operator_functionality(){
 }
 
 function handleEquals(){
-    if(!operator_present || !isSecondDigit){
+    if(!operator_present || !isSecondDigit || isDisplayEmpty){
         debug();
         return;
     }
@@ -136,7 +145,11 @@ function handleEquals(){
 }
 
 function handleOps(){
-    if(!operator_present){
+    if(isDisplayEmpty){
+        debug();
+        return;
+    }
+    else if(!operator_present){
         updateNumbers();
         operator_present=true;
         dot_count=0;    //bcos new number, need better algo for this
@@ -163,9 +176,34 @@ function handleOps(){
     debug();
 }
 
+function clear_functionality(){
+    const clear_button = document.querySelector('.AC');
+    const del_button = document.querySelector('.delete');
+    clear_button.addEventListener('click', clearDisplay);
+}
+
+function clearDisplay(){
+    if(isSecondDigit){
+        isSecondDigit=false;
+        dot_count=0;
+        display.innerHTML='';
+        return;
+    }
+    first_digit=0;
+    operator_present=false;
+    current_operator='';
+    dot_count=0;
+    isFirstDigit=false;
+    isSecondDigit=false;
+    isDisplayEmpty=true;
+    display.innerHTML='';
+    debug();
+}
+
 function addFunctionalities(){
     display_digits();
     operator_functionality();
+    clear_functionality();
 }
 
 document.addEventListener('DOMContentLoaded', () => {
