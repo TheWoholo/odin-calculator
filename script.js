@@ -32,10 +32,3 @@ function operate(operator, a, b) {
     }
 }
 
-// Test the function in the browser console
-console.log(operate('+', 5, 3));  // Output: 8
-console.log(operate('-', 10, 4)); // Output: 6
-console.log(operate('*', 6, 7));  // Output: 42
-console.log(operate('/', 20, 5)); // Output: 4
-console.log(operate('/', 10, 0)); // Output: "Error: Division by zero"
-console.log(operate('%', 10, 3)); // Output: "Error: Invalid operator"

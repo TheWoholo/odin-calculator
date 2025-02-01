@@ -1,0 +1,130 @@
+/* Reset styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Make body take up full screen and center content */
+html, body {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f4f4f4;
+}
+
+/* Calculator body */
+.calculator_body {
+    background-color: #222;
+    border-radius: 12px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    align-items: stretch;
+    gap: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    font-family: "DS-Digital", "Digital-7", sans-serif;
+}
+
+/* Display screen */
+.display {
+    width: 100%;
+    height: 70px;
+    background-color: aliceblue;
+    color: black;
+    text-align: right;
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 10px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+/* Buttons container */
+.buttons {
+    display: flex;
+    gap:10px;
+}
+
+/* Digits & options container */
+.digits_and_options {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+/* Options (AC, +/-, %) */
+.options {
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.digits {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.digits div {
+    display: flex;
+    justify-content: space-between;
+    gap:10px;
+}
+
+.zero{
+    flex:1;
+}
+
+/* Operators container */
+.operators {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    flex: 1; /* Smaller than digits section */
+}
+
+/* General button styles */
+button {
+    width: 70px;
+    height: 70px;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10%;
+    cursor: pointer;
+    background-color: #555;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+}
+
+button:hover {
+    background-color: #777;
+}
+
+/* Special styling for operators */
+.operators button {
+    background-color: orange;
+    color: white;
+}
+
+.operators button:hover {
+    background-color: #ff9500;
+}
+
+/* Style for AC and special buttons */
+.options button {
+    background-color: #888;
+    color: black;
+}
+
+.options button:hover {
+    background-color: #aaa;
+}
