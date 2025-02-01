@@ -187,6 +187,16 @@ function clear_functionality(){
     const clear_button = document.querySelector('.AC');
     const del_button = document.querySelector('.delete');
     clear_button.addEventListener('click', clearDisplay);
+    del_button.addEventListener('click',deleteOperation);
+}
+
+function deleteOperation(){
+    if(display.innerHTML.length==0)
+        return;
+    else if(display.innerHTML.length==1)
+        clearDisplay();
+    else
+        display.innerHTML = display.innerHTML.slice(0,-1);
 }
 
 function clearDisplay(){
