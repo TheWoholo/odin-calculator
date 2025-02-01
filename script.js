@@ -32,3 +32,25 @@ function operate(operator, a, b) {
     }
 }
 
+function display_digits() {
+    const digits = document.querySelectorAll('.digits button');
+    const display = document.querySelector('.display');
+
+    digits.forEach(button => {
+        button.addEventListener('click', () => {
+            if (display.innerHTML === '0') {
+                display.innerHTML = ''; // Clear the display if it was just '0'
+            }
+            display.innerHTML += button.innerHTML;
+        });
+    });
+}
+
+
+function addFunctionalities(){
+    display_digits();
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+    addFunctionalities(); // Call addFunctionalities after DOM is ready
+});
