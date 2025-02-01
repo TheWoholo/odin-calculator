@@ -145,7 +145,14 @@ function handleEquals(){
 }
 
 function handleOps(){
-    if(isDisplayEmpty){
+    if(this.innerHTML=='-' && !isFirstDigit && !isSecondDigit){
+        display.innerHTML='-';
+        isSecondDigit=true;
+        console.log("Second digit starts");
+        debug();
+        return;
+    }
+    else if(isDisplayEmpty){
         debug();
         return;
     }
